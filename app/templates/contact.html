@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block main %}
+        <strong> <h1> Contact Form </h1> </strong> 
+        <hr>
+    </head>
+    <body>
+        <h3> Please fill in this form to contact the website owner. </h3>
+        
+        <form action="{{url_for('contact')}}" method="POST">
+            <label for="name"> <strong> Name </strong> <font color="red"> [Required] </font> </label>
+            <p> Please enter your full name </p>
+            <input type="text" name="name" style="width: 230px; height:30px"/>
+            
+            <br>
+            <br>
+        
+            <label for="email"> <strong> E-mail </strong> <font color="red"> [Required] </font> </label>
+            <p> Please enter your e-mail address </p>
+            <input type="email" name="email" style="width: 230px; height:30px"/>
+            
+            <br>
+            <br>
+            
+            <label for="subject"> <strong> Subject </strong> <font color="red"> [Required] </font> </label>
+            <p> Please enter the subject of your message. </p>
+            <input type="text" name="subject" style="width: 230px; height:30px"/>
+            
+            <br>
+            <br>
+            
+            <label for="msg"> <strong> Message </strong> <font color="red"> [Required] </font>  </label>
+            <p> Please enter the message you would like to send. </p>
+            <input type="text" name="msg" style="width: 300px; height:100px"/>
+            
+            <br>
+            <br>
+            
+            <input type="submit" value="Send" style="font-size:14pt;color:white;background-color:blue;border:1px solid #336600;padding:3px"/>
+        </form>
+        {% endblock %}
+    </body>
+</html>
